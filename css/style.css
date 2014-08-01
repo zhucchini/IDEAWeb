@@ -74,7 +74,31 @@ h1, h2, h3 {
 	font-weight: 300;
 }
 
+/****************************** LOGO ********************************/
+#logo-container {
+    position: relative;
+    text-align: center;
+    margin: 0 50%;
+    left: -300px;
+    padding-top: 10%;
+}
+
+.logo {
+    position: absolute;
+    width: 600px;
+    margin: 0 auto;
+}
+
+#img-logo {
+    display: none;
+}
+
 /****************************** HEADER ******************************/
+#main-content {
+    display: none;
+    padding-top: 320px;
+}
+
 header {
 	position: relative;
 	width: 100%;
