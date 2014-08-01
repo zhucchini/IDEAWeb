@@ -16,6 +16,8 @@
         </script> -->
         <script>
             $(window).load(function(){
+                paddingHeight = $(window).height() * 0.1 + $('#img-logo').height() * 1.1;
+                $('#main-content').css('padding-top', paddingHeight);
                 $('#img-loading').delay(500).fadeOut(500);
                 $('#img-logo').delay(1000).fadeIn(500);
                 $('#space-holder').delay(1499).hide(1);

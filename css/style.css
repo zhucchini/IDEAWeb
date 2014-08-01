@@ -76,15 +76,15 @@ h1, h2, h3 {
 
 /****************************** LOGO ********************************/
 #logo-container {
-    position: relative;
+    display: block;
+    position: absolute;
     text-align: center;
-    margin: 0 50%;
-    left: -300px;
+    width: 100%;
+    margin: 0 auto;
     padding-top: 10%;
 }
 
 .logo {
-    position: absolute;
     width: 600px;
     margin: 0 auto;
 }
@@ -100,7 +100,6 @@ h1, h2, h3 {
 /****************************** HEADER ******************************/
 #main-content {
     display: none;
-    padding-top: 320px;
 }
 
 header {
@@ -267,6 +266,7 @@ header .icon-arrow-down {
 	#tldr-container {
 		width: 380px;
 		margin: 0 auto;
+        padding: 0 5% 0 5%;
 	}
 	
 	#tldr-section h1 {
