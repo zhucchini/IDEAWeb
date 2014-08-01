@@ -93,6 +93,10 @@ h1, h2, h3 {
     display: none;
 }
 
+#space-holder {
+    height: 2000px;
+}
+
 /****************************** HEADER ******************************/
 #main-content {
     display: none;
