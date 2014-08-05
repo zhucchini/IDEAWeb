@@ -66,6 +66,7 @@ html {
 body {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-weight: 300;
+    font-size: 100%;
 	height: 100%;
 	line-height: normal;
 }
@@ -100,6 +101,7 @@ h1, h2, h3 {
 /****************************** HEADER ******************************/
 #main-content {
     display: none;
+    z-index: -1;
 }
 
 header {
@@ -108,7 +110,7 @@ header {
 	height: 100%;
 	
 	text-align: center;
-	font-size: 20px;
+	font-size: 1.25em;
 }
 
 header img {
@@ -121,7 +123,7 @@ header img {
 #tagline {
 	clear: both;
 	margin-bottom: 10px;
-	font-size: 30px;
+	font-size: 1.875em;
 }
 
 header .highlight {
@@ -137,20 +139,245 @@ header .highlight {
 }
 
 #location {
-	display: inline-block;
+    display: inline-block;
+    margin-bottom: 30px;
 }
 
 header .icon-arrow-down {
 	margin-top: 5%;
+    margin-bottom: 5%;
 	
 	color: #ffc301;
+}
+
+/*********************** REGISTRATION FORM ************************/
+
+.registration {
+    padding: 5px;
+    background-color: #77aaef;
+    border: 1px solid #666;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #B5D0FE;
+}
+a:active {
+    color: #0160FF;
+}
+
+#registrationForm, .statusMessage, input[type="submit"], input[type="button"] {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;  
+    border-radius: 10px;
+}
+
+#registrationForm, .statusMessage {
+    color: #666;
+    background-color: #ebedf2;
+    background: -webkit-gradient( linear, left bottom, left top, color-stop(0,#dfe1e5), color-stop(1, #ebedf2) );
+    background: -moz-linear-gradient( center bottom, #dfe1e5 0%, #ebedf2 100% );  
+    border: 1px solid #aaa;
+    -moz-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+    opacity: .95;
+}
+
+#registrationForm {
+    width: 40em;
+    height: 33em;
+    padding: 0 1.5em 1.5em 1.5em;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+#registrationForm.positioned {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.statusMessage {
+    display: none;
+    margin: auto;
+    width: 30em;
+    height: 2em;
+    padding: 1.5em;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+ 
+.statusMessage p {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#registrationForm h2 {
+    font-size: 2em;
+    font-style: italic;
+    letter-spacing: .05em;
+    margin: 0 0 1em -.75em;
+    padding: 1em;
+    width: 19.5em;  
+    color: #aeb6aa;
+    /*  background: #dfe0e5 url('images/stamp.jpg') no-repeat 15em -3em;  http://morguefile.com/archive/display/606433 */
+    border-bottom: 1px solid #aaa;
+    -moz-border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;  
+    border-radius: 10px 10px 0 0;
+}
+ 
+ 
+/* Give form elements consistent margin, padding and line height */
+ 
+#registrationForm ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ 
+#registrationForm ul li {
+    margin: .9em 0 0 0;
+    padding: 0;
+}
+ 
+#registrationForm input, #registrationForm label {
+    line-height: 1em;
+}
+ 
+ 
+/* The field labels */
+ 
+label {
+    display: block;
+    float: left;
+    clear: left;
+    text-align: right;
+    width: 28%;
+    padding: .4em 0 0 0;
+    margin: .15em .5em 0 0;
+    font-weight: bold;
+}
+ 
+ 
+/* The fields */
+ 
+input, textarea {
+    display: block;
+    margin: 0;
+    padding: .4em;
+    width: 67%;
+    font-family: "Georgia", serif;
+    font-size: 1em;
+    border: 1px solid #aaa;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;    
+    border-radius: 5px;
+    -moz-box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+    -webkit-box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+    box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+    background: #fff;
+}
+ 
+textarea {
+    height: 13em;
+    line-height: 1.5em;
+    resize: none;
+}
+
+#registrationForm *:focus {
+    border: 1px solid #66f;
+    outline: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+input:valid, textarea:valid {
+    background: #dfd;
+}
+
+/* The Send and Cancel buttons */
+ 
+input[type="submit"], input[type="button"] {
+    float: right;
+    margin: 2em 1em 0 1em;
+    width: 10em;
+    padding: .5em;
+    border: 1px solid #666;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;  
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    color: #fff;
+    background: #0a0;
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: bold;
+    opacity: .7;
+    -webkit-appearance: none;
+    -moz-transition: opacity .3s;
+    -webkit-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    transition: opacity .3s;
+}
+ 
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="button"]:hover,
+input[type="button"]:active {
+    cursor: pointer;
+    opacity: 1;
+}
+ 
+input[type="submit"]:active, input[type="button"]:active {
+    color: #333;
+    background: #eee;
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+}
+ 
+input[type="button"] {
+    background: #f33;
+}
+
+/* Header/footer boxes */
+ 
+.wideBox {
+    clear: both;
+    text-align: center;
+    margin: 70px;
+    padding: 10px;
+    background: #ebedf2;
+    border: 1px solid #333;
+}
+ 
+.wideBox h1 {
+    font-weight: bold;
+    margin: 20px;
+    color: #666;
+    font-size: 1.5em;
 }
 
 /****************************** INFO ******************************/
 #info {
 /*	min-height: 100%;*/
-	width: 100%;
+    width: 100%;
 }
+
 #info h1 {
 	padding: 40px;
 	text-align: center;
@@ -167,64 +394,72 @@ header .icon-arrow-down {
 	list-style: none;
 	margin-top: 20px;
 }
-	#info h2 {
-		display: inline-block;
-		float: left;
-		width: 100px;
-		margin-right: 20px;
-		
-		text-transform: lowercase;
-		font-style: italic;
-		color: #ffc301;
-		
-	}
-	#info p {
-		display: inline-block;
-		width: 500px;
-	}
+
+#info h2 {
+    display: inline-block;
+    float: left;
+    width: 100px;
+    margin-right: 20px;
+
+    text-transform: lowercase;
+    font-style: italic;
+    color: #ffc301;
+}
+
+#info p {
+    display: inline-block;
+    width: 500px;
+}
+
 /****************************** TL;DR ******************************/
 #tldr-section {
 	display: block;
 	background-color: #b8b8b8;
 	overflow: auto;
 }
-	#tldr-container {
-		width: 534px;
-		height: auto;
-		overflow: auto;
-		margin: 0px auto;
-	}
-		#tldr-section h1 {
-			display: inline-block;
-			float: left;
-			line-height: 186px;
-			margin-right: 20px;
-			font-size: 40px;
-		}
-		#tldr-section h2 {
-			display: inline-block;
-			float: left;
-			margin-bottom: 20px;
 
-			color: #ffc301;
-			font-size: 120px;
-		}
-		#tldr-section ul {
-			display: inline-block;
-			float: left;
-			margin-left: 20px;
-			margin-top: 40px;
-			
-			font-size: 24px;
-		}
-		#tldr-section li {
-			display: block;
-			list-style: none;
-		}
-		#tldr-section [class^="icon-"], #tldr-section [class*=" icon-"] {
-			display: inline-block;
-			margin-right: 5px;
-		}
+#tldr-container {
+    width: 534px;
+    height: auto;
+    overflow: auto;
+    margin: 0px auto;
+}
+
+#tldr-section h1 {
+    display: inline-block;
+    float: left;
+    line-height: 186px;
+    margin-right: 20px;
+    font-size: 2.5em;
+}
+
+#tldr-section h2 {
+    display: inline-block;
+    float: left;
+    margin-bottom: 20px;
+
+    color: #ffc301;
+    font-size: 7.5em;
+}
+
+#tldr-section ul {
+    display: inline-block;
+    float: left;
+    margin-left: 20px;
+    margin-top: 40px;
+
+    font-size: 1.5em;
+}
+
+#tldr-section li {
+    display: block;
+    list-style: none;
+}
+
+#tldr-section [class^="icon-"], #tldr-section [class*=" icon-"] {
+    display: inline-block;
+    margin-right: 5px;
+}
 	
 
 /****************************** SPONSORS ******************************/
@@ -287,6 +522,6 @@ header .icon-arrow-down {
 		float: none;
 		margin: 10px 0px;
 
-		font-size: 24px;
+		font-size: 1.5em;
 	}
 }

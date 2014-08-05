@@ -4,8 +4,14 @@
         <title>UCLA IDEA</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0;">
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script> -->
+        <script src="./js/jquery-1.11.1.js"></script>
+        <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> -->
+        <script src="./js/main.js"></script>
+        
+        
+        
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- <script>
         $(window).load(function(){
             $('#img-loading').show().delay(1499).hide(1);
@@ -24,21 +30,66 @@
                 $('#main-content').delay(1500).fadeIn(1000);
             });
         </script>
+       
     </head>
     <body>
+        <!-- REGISTRATION FORM -->
+        <div id="form-messages">
+            <div id="sendingMessage" class="statusMessage"><p>Submitting your form. Please wait...</p></div>
+            <div id="successMessage" class="statusMessage"><p>Thanks for submitting! We'll get back to you shortly.</p></div>
+            <div id="failureMessage" class="statusMessage"><p>There was a problem submitting your form. Please try again.</p></div>
+            <div id="incompleteMessage" class="statusMessage"><p>Please complete all the fields in the form.</p></div>
+        </div>
+        <form id = "registrationForm" action = "processForm.php" method = "post">
+            <h2>Welcome to UCLA Hardware Hackathon...</h2>
+            <ul>
+                <li>
+                    <label for = "userName">Your Name</label>
+                    <input type = "text" name = "userName" id = "userName" placeholder = "Please type your name" required = "required" maxlength = "50" />
+                </li>
+                <li>
+                    <label for = "userEmail">Your Email Address</label>
+                    <input type = "email" name = "userEmail" id = "userEmail" placeholder = "Please type your email address" required = "required" maxlength="50" /> 
+                </li>
+                <li>
+                    <label for = "userYear">Your Grade</label>
+                    <select type = "year" name = "userYear" id = "userYear" placeholder = "Select your Grade Level" required = "required" >
+                        <option value = "freshman">1</option>
+                        <option value = "sophomore">2</option>
+                        <option value = "junior">3</option>
+                        <option value = "senior">4</option>
+                        <option value = "superSenior">5+</option>
+                    </select>
+                </li>
+            </ul>
+            <div id = "formButtons">
+                <input type = "submit" id = "sendForm" name = "sendForm" value = "Submit" />
+                <input type = "button" id = "cancel" name = "cancel" value = "Cancel" />
+            </div>
+        </form>
+        
+        <!-- LOGO -->
         <div id="logo-container">
             <img class="logo" id="img-loading" src="img/loading.gif" alt="" />
             <!-- <img class="logo" id="img-transition" src="img/transition.gif" alt="" /> -->
             <img class="logo" id="img-logo" src="img/logo.gif" alt="" />
         </div>
         <div id="space-holder"></div>
+        
+        <!-- MAIN CONTENT -->
         <div id="main-content">
             <header> 
                 <div id="header-info">
-                    <div id="tagline">imagine. develop. execute. <div class="highlight">achieve.</div></div>
-                    <div id="date">Jan 23-25, 2015</div><div id="location">UCLA Ackerman Grand Ballroom</div>
-                    <div class="icon-arrow-down"></div>
+                    <div id="tagline">imagine. develop. execute.
+                        <div class="highlight">achieve.</div>
+                    </div>
+                    <div id="date">Jan 23-25, 2015</div>
+                    <div id="location">UCLA Ackerman Grand Ballroom</div>
                 </div>
+                <div id ="registration">
+                    <a class = "registration" href = "#registrationForm">Register Now!</a>
+                </div>
+                <div class="icon-arrow-down"></div>
             </header>
             <div id="info">
                 <h1>UCLA's first hardware hackathon</h1>
@@ -86,9 +137,11 @@
                 <h1>Interested in Sponsoring?</h1>
                 <p>Please send an email to ____@uclaidea.com</p>
             </div>
+            
             <footer>
 
             </footer>
         </div>
+            
     </body>
 </html>
