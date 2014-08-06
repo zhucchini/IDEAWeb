@@ -256,6 +256,9 @@ header .icon-arrow-down {
 	}
 	
     #header-info {
+        width: 92.86%;
+        left: 50%;
+        margin-left: -46.43%;
         top: 45%;
         height: 55%;
     }
