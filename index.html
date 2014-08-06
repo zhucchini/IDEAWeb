@@ -16,30 +16,30 @@
         </script> -->
         <script>
             $(window).load(function(){
-                paddingHeight = $(window).height() * 0.1 + $('#img-logo').height() * 1.1;
-                $('#main-content').css('padding-top', paddingHeight);
+                // paddingHeight = $(window).height() * 0.1 + $('#img-logo').height() * 1.1;
+                // $('#main-content').css('padding-top', paddingHeight);
                 $('#img-loading').delay(500).fadeOut(500);
                 $('#img-logo').delay(1000).fadeIn(500);
                 $('#space-holder').delay(1499).hide(1);
-                $('#main-content').delay(1500).fadeIn(1000);
+                $('#main-content, #header-info').delay(1500).fadeIn(1000);
             });
         </script>
     </head>
     <body>
-        <div id="logo-container">
-            <img class="logo" id="img-loading" src="img/loading.gif" alt="" />
-            <!-- <img class="logo" id="img-transition" src="img/transition.gif" alt="" /> -->
-            <img class="logo" id="img-logo" src="img/logo.gif" alt="" />
-        </div>
+        <header>
+            <div id="logo-container">
+                <img class="logo" id="img-loading" src="img/loading.gif" alt="" />
+                <!-- <img class="logo" id="img-transition" src="img/transition.gif" alt="" /> -->
+                <img class="logo" id="img-logo" src="img/logo.gif" alt="" />
+            </div>
+            <div id="header-info">
+                <div id="tagline">imagine. develop. execute. <div class="highlight">achieve.</div></div>
+                <div id="date">Jan 23-25, 2015</div><div id="location">UCLA Ackerman Grand Ballroom</div>
+                <div class="icon-arrow-down"></div>
+            </div>
+        </header>
         <div id="space-holder"></div>
         <div id="main-content">
-            <header> 
-                <div id="header-info">
-                    <div id="tagline">imagine. develop. execute. <div class="highlight">achieve.</div></div>
-                    <div id="date">Jan 23-25, 2015</div><div id="location">UCLA Ackerman Grand Ballroom</div>
-                    <div class="icon-arrow-down"></div>
-                </div>
-            </header>
             <div id="info">
                 <h1>UCLA's first hardware hackathon</h1>
                 <ul>

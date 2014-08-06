@@ -81,7 +81,7 @@ h1, h2, h3 {
     text-align: center;
     width: 100%;
     margin: 0 auto;
-    padding-top: 10%;
+    top: 15%;
 }
 
 .logo {
@@ -94,7 +94,7 @@ h1, h2, h3 {
 }
 
 #space-holder {
-    height: 2000px;
+    height: 904px;
 }
 
 /****************************** HEADER ******************************/
@@ -105,17 +105,25 @@ h1, h2, h3 {
 header {
 	position: relative;
 	width: 100%;
-	height: 100%;
+    height: 100%;
 	
 	text-align: center;
 	font-size: 20px;
+}
+
+#header-info {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 60%;
+    height: 40%;
 }
 
 header img {
 	display: block;
 	width: 600px;
 	margin: 0 auto;
-	padding-top: 10%;
+	/* padding-top: 7%;*/
 }
 
 #tagline {
@@ -138,11 +146,13 @@ header .highlight {
 
 #location {
 	display: inline-block;
+    margin-bottom: 30px;
 }
 
 header .icon-arrow-down {
-	margin-top: 5%;
-	
+    position: absolute;
+    width: 100%;
+	bottom: 10%;
 	color: #ffc301;
 }
 
@@ -245,6 +255,11 @@ header .icon-arrow-down {
 		width: 85.71%;
 	}
 	
+    #header-info {
+        top: 45%;
+        height: 55%;
+    }
+    
 	#info {
 		height: auto;
 	}
