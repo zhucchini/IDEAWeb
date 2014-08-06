@@ -66,6 +66,7 @@ html {
 body {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-weight: 300;
+    font-size: 100%;
 	height: 100%;
 	line-height: normal;
 }
@@ -108,7 +109,7 @@ header {
     height: 100%;
 	
 	text-align: center;
-	font-size: 20px;
+	font-size: 1.25em;
 }
 
 #header-info {
@@ -129,7 +130,7 @@ header img {
 #tagline {
 	clear: both;
 	margin-bottom: 10px;
-	font-size: 30px;
+	font-size: 1.5em;
 }
 
 header .highlight {
@@ -209,7 +210,7 @@ header .icon-arrow-down {
 			float: left;
 			line-height: 186px;
 			margin-right: 20px;
-			font-size: 40px;
+			font-size: 2.5em;
 		}
 		#tldr-section h2 {
 			display: inline-block;
@@ -217,7 +218,7 @@ header .icon-arrow-down {
 			margin-bottom: 20px;
 
 			color: #ffc301;
-			font-size: 120px;
+			font-size: 7.5em;
 		}
 		#tldr-section ul {
 			display: inline-block;
@@ -225,7 +226,7 @@ header .icon-arrow-down {
 			margin-left: 20px;
 			margin-top: 40px;
 			
-			font-size: 24px;
+			font-size: 1.5em;
 		}
 		#tldr-section li {
 			display: block;
@@ -305,6 +306,6 @@ header .icon-arrow-down {
 		float: none;
 		margin: 10px 0px;
 
-		font-size: 24px;
+		font-size: 1.5em;
 	}
 }
