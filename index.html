@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UCLA IDEA</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0;">
+    </head>
+    <body>
+		<header>
+			<div id="header-content">
+				<img id="logo" src="img/logo.gif" alt="">
+				<div id="header-info">
+					<div id="tagline">imagine. develop. execute. <div class="highlight">achieve.</div></div>
+					<div id="date">Jan 23-25, 2015</div><div id="location">UCLA Ackerman Grand Ballroom</div>	
+				</div>
+				
+				<form id="basic-form">
+					<ul>
+						<li><label for="email">Email: </label><input id="email" type="text"></li>
+						<li><label for="password">Password: </label><input id="password" type="password"></li>
+<!--						<li><label for="confirm-password">Confirm Password: </label><input id="confirm-password" type="password"></li>-->
+					</ul>
+				</form>
+				
+				<div id="register-button"><a>Sign in</a></div>
+				<div class="icon-arrow-down"></div>
+			</div>
+		</header>
+		<div id="info">
+			<h1>UCLA's first hardware hackathon</h1>
+			<div id="info-container">
+				<ul>
+					<li>
+						<h2>Imagine.</h2>
+						<p>Come and create anything that you can possibly think of and show it to the world for
+							all to see. The possibilities are endless as you and other undergraduates from across
+							the nation will make innovative ideas come to life.</p>
+					</li>
+					<li>
+						<h2>Develop.</h2>
+						<p>UCLA IDEA is different from your average hackathon with the main focus not being 
+							software, but the hardware that runs it all. It is geared towards those who are 
+							especially passionate about designing and building.</p>
+					</li>
+					<li>
+						<h2>Execute.</h2>
+						<p>Hackers will be working in teams of 3-5 to make a product and will be provided 
+							with all the necessary tools. If your team needs something more, just let us 
+							know and we'll make sure you get it.</p>
+					</li>
+					<li>
+						<h2>Achieve.</h2>
+						<p>Teams can submit products of any type such as prototypes, models, CAD renderings,
+							schematics, or even just simple designs. You will have the opportunity to win cash 
+							prizes, show your product to companies themselves, and much more!</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="tldr-section">
+			<div id="tldr-container">
+				<h1>tl;dr</h1>
+				<h2>{</h2>
+				<div id="tldr-section">
+					<ul>
+						<li><div class="icon-uniE608"></div>Jan 23-25, 2015</li>
+						<li><div class="icon-uniE600"></div>36 hours</li>
+						<li><div class="icon-location"></div>Ackerman Grand Ballroom, UCLA</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="sponsors">
+			<h1>Interested in Sponsoring?</h1>
+			<p>Please send an email to ____@uclaidea.com</p>
+		</div>
+		<footer>
+		
+		</footer>
+		
+		<script>
+			$(document).ready(function() {
+				$("#basic-form").hide();
+				
+				$("#register-button").click(function() {
+					$("#header-info").slideToggle();
+					$("#basic-form").slideToggle();
+
+					/*
+						TODO:
+						. basic-form visible: 
+							. "sign-in" checks if content in all are the same
+							. then checks if two passwords are the same
+							. after changing out of email, hits database and sees if the email already exists
+							. if it doesn't, "sign in" into "sign up", and shows "confirm password"
+							. if does, brings to application page
+					*/
+				});
+			});
+		</script>
+    </body>
+</html>
